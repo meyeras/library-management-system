@@ -1,15 +1,27 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, status, Request
 from fastapi.middleware.cors import CORSMiddleware
 from .database import engine
+from .routers import books, users, borrows, login
+from app import models
+from sqlalchemy.exc import SQLAlchemyError
 
-from .routers import books, users, borrows
-
+from app.middlewares import SQLAlchemyToPydanticMiddleware
+models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
-app.include_router(books.router, tags=["Books"])
-app.include_router(users.router, tags=["Users"])
-app.include_router(borrows.router, tags=["Borrows"])
+@app.exception_handler(SQLAlchemyError)
+async def database_exception_handler(request, exc):
+    # Handle the database connection error here
+    # You can log the error, return custom error responses, etc.
+    return {"detail": "Database Connection Error"}
 
+
+app.include_router(books.router, prefix="/books", tags=["Books"])
+app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(borrows.router, prefix="/borrows", tags=["Borrows"])
+app.include_router(login.router, tags=["Users"])
+
+#app.add_middleware(SQLAlchemyToPydanticMiddleware)
 
 origins = [
     "http://localhost:3000",

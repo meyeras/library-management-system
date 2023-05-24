@@ -19,7 +19,7 @@ class Book(Base):
     author_id = Column(Integer, ForeignKey('authors.id'))
     title = Column(String)
     isbn = Column(String)
-    copies = relationship('Copy', backref='book')
+    copies = relationship('Copy', backref='book', lazy='dynamic')
     author = relationship('Author', backref='books')
 
 
@@ -28,8 +28,8 @@ class Copy(Base):
 
     id = Column(Integer, primary_key=True)
     book_id = Column(Integer, ForeignKey('books.id'))
-    borrowed = Column(Boolean)
-    book = relationship('Book', backref='copies')
+    borrowed = Column(Boolean, default=False)
+    # book = relationship('Book', backref='copies')
 
 
 
@@ -40,7 +40,7 @@ class User(Base):
     username = Column(String)
     email = Column(String)
     password = Column(String)
-    is_admin = Column(Boolean)
+    is_admin = Column(Boolean, default=False)
 
 
 class Borrow(Base):
@@ -49,5 +49,8 @@ class Borrow(Base):
     id = Column(Integer, primary_key=True)
     copy_id = Column(Integer, ForeignKey('copies.id'))
     user_id = Column(Integer, ForeignKey('users.id'))
+
+    copy = relationship('Copy', backref='borrows')
+    user = relationship('User', backref='borrows')
     borrow_date = Column(String)
     return_date = Column(String)

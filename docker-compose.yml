@@ -20,5 +20,14 @@ services:
     volumes:
       - postgres-db:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: assayag.meir@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: mongodb?
+    ports:
+      - 8080:80
+
 volumes:
   postgres-db:
