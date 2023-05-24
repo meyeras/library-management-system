@@ -33,16 +33,6 @@ class Copy(Base):
 
 
 
-class User(Base):
-    __tablename__ = 'users'
-
-    id = Column(Integer, primary_key=True)
-    username = Column(String)
-    email = Column(String)
-    password = Column(String)
-    is_admin = Column(Boolean, default=False)
-
-
 class Borrow(Base):
     __tablename__ = 'borrows'
 
@@ -54,3 +44,13 @@ class Borrow(Base):
     user = relationship('User', backref='borrows')
     borrow_date = Column(String)
     return_date = Column(String)
+
+
+class User(Base):
+    __tablename__ = 'users'
+
+    id = Column(Integer, primary_key=True)
+    username = Column(String)
+    email = Column(String)
+    password = Column(String)
+    is_admin = Column(Boolean, default=False)

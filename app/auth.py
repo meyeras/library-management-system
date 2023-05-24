@@ -57,8 +57,3 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
         raise HTTPException(status_code=401, detail="Invalid authentication token")
     print("Get current user succeeded!")
     return user
-
-# Function to check if current user is admin
-def is_admin(current_user: User = Depends(get_current_user)):
-    if not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Access denied")

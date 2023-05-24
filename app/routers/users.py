@@ -7,7 +7,7 @@ from app.crypto import get_password_hash
 from typing import List
 
 
-from app.auth import get_current_user, is_admin
+from app.auth import get_current_user
 router = APIRouter()
 
 @router.post("/register")

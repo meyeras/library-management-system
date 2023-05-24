@@ -1,0 +1,284 @@
+[
+    {
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "isbn": 9780590353427,
+      "copies": 5
+    },
+    {
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Chamber of Secrets",
+      "isbn": 9780439064873,
+      "copies": 2
+    },
+    {
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "isbn": 9780439136365,
+      "copies": 8
+    },
+    {
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Goblet of Fire",
+      "isbn": 9780439139601,
+      "copies": 3
+    },
+    {
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Order of the Phoenix",
+      "isbn": 9780439358071,
+      "copies": 7
+    },
+    {
+      "author": "George R.R. Martin",
+      "title": "A Game of Thrones",
+      "isbn": 9780553381689,
+      "copies": 9
+    },
+    {
+      "author": "George R.R. Martin",
+      "title": "A Clash of Kings",
+      "isbn": 9780553381696,
+      "copies": 4
+    },
+    {
+      "author": "George R.R. Martin",
+      "title": "A Storm of Swords",
+      "isbn": 9780553381702,
+      "copies": 6
+    },
+    {
+      "author": "George R.R. Martin",
+      "title": "A Feast for Crows",
+      "isbn": 9780553381696,
+      "copies": 1
+    },
+    {
+      "author": "George R.R. Martin",
+      "title": "A Dance with Dragons",
+      "isbn": 9780553385953,
+      "copies": 10
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Pride and Prejudice",
+      "isbn": 9780141439518,
+      "copies": 5
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Sense and Sensibility",
+      "isbn": 9780141439662,
+      "copies": 2
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Emma",
+      "isbn": 9780141439587,
+      "copies": 8
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Mansfield Park",
+      "isbn": 9780141439808,
+      "copies": 3
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Persuasion",
+      "isbn": 9780141439686,
+      "copies": 7
+    },
+    {
+      "author": "Ernest Hemingway",
+      "title": "The Old Man and the Sea",
+      "isbn": 9780684801223,
+      "copies": 9
+    },
+    {
+      "author": "Ernest Hemingway",
+      "title": "For Whom the Bell Tolls",
+      "isbn": 9780684803357,
+      "copies": 4
+    },
+    {
+      "author": "Ernest Hemingway",
+      "title": "A Farewell to Arms",
+      "isbn": 9780684801469,
+      "copies": 6
+    },
+    {
+      "author": "Ernest Hemingway",
+      "title": "The Sun Also Rises",
+      "isbn": 9780743297332,
+      "copies": 1
+    },
+    {
+      "author": "Ernest Hemingway",
+      "title": "To Have and Have Not",
+      "isbn": 9780684818986,
+      "copies": 10
+    },
+    {
+      "author": "Agatha Christie",
+      "title": "Murder on the Orient Express",
+      "isbn": 9780062073495,
+      "copies": 5
+    },
+    {
+      "author": "Agatha Christie",
+      "title": "And Then There Were None",
+      "isbn": 9780062073488,
+      "copies": 2
+    },
+    {
+      "author": "Agatha Christie",
+      "title": "Death on the Nile",
+      "isbn": 9780062073556,
+      "copies": 8
+    },
+    {
+      "author": "Agatha Christie",
+      "title": "The Murder of Roger Ackroyd",
+      "isbn": 9780062073587,
+      "copies": 3
+    },
+    {
+      "author": "Agatha Christie",
+      "title": "The ABC Murders",
+      "isbn": 9780062073587,
+      "copies": 7
+    },
+    {
+      "author": "Charles Dickens",
+      "title": "Great Expectations",
+      "isbn": 9780141439563,
+      "copies": 9
+    },
+    {
+      "author": "Charles Dickens",
+      "title": "Oliver Twist",
+      "isbn": 9780141439747,
+      "copies": 4
+    },
+    {
+      "author": "Charles Dickens",
+      "title": "A Tale of Two Cities",
+      "isbn": 9780141439600,
+      "copies": 6
+    },
+    {
+      "author": "Charles Dickens",
+      "title": "David Copperfield",
+      "isbn": 9780141439440,
+      "copies": 1
+    },
+    {
+      "author": "Charles Dickens",
+      "title": "Bleak House",
+      "isbn": 9780141439723,
+      "copies": 10
+    },
+    {
+      "author": "Mark Twain",
+      "title": "Adventures of Huckleberry Finn",
+      "isbn": 9780486280615,
+      "copies": 5
+    },
+    {
+      "author": "Mark Twain",
+      "title": "The Adventures of Tom Sawyer",
+      "isbn": 9780486400778,
+      "copies": 2
+    },
+    {
+      "author": "Mark Twain",
+      "title": "A Connecticut Yankee in King Arthur's Court",
+      "isbn": 9780486415918,
+      "copies": 8
+    },
+    {
+      "author": "Mark Twain",
+      "title": "The Prince and the Pauper",
+      "isbn": 9780486411101,
+      "copies": 3
+    },
+    {
+      "author": "Mark Twain",
+      "title": "Life on the Mississippi",
+      "isbn": 9780486408835,
+      "copies": 7
+    },
+    {
+      "author": "William Shakespeare",
+      "title": "Romeo and Juliet",
+      "isbn": 9780743477116,
+      "copies": 9
+    },
+    {
+      "author": "William Shakespeare",
+      "title": "Hamlet",
+      "isbn": 9780743477123,
+      "copies": 4
+    },
+    {
+      "author": "William Shakespeare",
+      "title": "Macbeth",
+      "isbn": 9780743477109,
+      "copies": 6
+    },
+    {
+      "author": "William Shakespeare",
+      "title": "Othello",
+      "isbn": 9780743477550,
+      "copies": 1
+    },
+    {
+      "author": "William Shakespeare",
+      "title": "King Lear",
+      "isbn": 9780743477116,
+      "copies": 10
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Northanger Abbey",
+      "isbn": 9780141439799,
+      "copies": 5
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Persuasion",
+      "isbn": 9780141439686,
+      "copies": 2
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Love and Friendship",
+      "isbn": 9780063032533,
+      "copies": 8
+    },
+    {
+      "author": "Jane Austen",
+      "title": "The Watsons",
+      "isbn": 9780141439792,
+      "copies": 3
+    },
+    {
+      "author": "Jane Austen",
+      "title": "Sanditon",
+      "isbn": 9780141439792,
+      "copies": 7
+    },
+    {
+      "author": "Charlotte Bronte",
+      "title": "Jane Eyre",
+      "isbn": 9780141441146,
+      "copies": 9
+    },
+    {
+      "author": "Charlotte Bronte",
+      "title": "Villette",
+      "isbn": 978014043,
+      "copies": 4
+    }
+  ]
