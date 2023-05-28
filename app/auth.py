@@ -9,9 +9,8 @@ from fastapi.responses import JSONResponse
 from app.crypto import verify_password
 
 security = HTTPBearer()
+
 # Example admin user credentials (change these with your own)
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "adminpassword"
 SECRET_KEY = "mysecretkey"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 300

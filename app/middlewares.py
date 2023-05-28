@@ -1,30 +1,21 @@
-from typing import Any, Callable, Awaitable
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+from fastapi.exceptions import HTTPException
+from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 
-from fastapi import Request, Response
-
-def sqlalchemy_to_dict(obj):
-    result = {}
-    for column in obj.__table__.columns:
-        value = getattr(obj, column.name)
-        result[column.name] = value
-    return result
-
-
-class SQLAlchemyToPydanticMiddleware:
-    def __init__(self, app) -> None:
-        self.app = app
-
-    async def __call__(self, scope, receive, send):
-        async def wrapped_receive():
-            return await receive()
-
-        print("Before getting response from the handler")
-        response = await self.app(scope, wrapped_receive, send)
-        print("After getting response from the handler")
-        response_model = getattr(scope.get("endpoint"), "response_model", None)
-        print("The response model repr is {0}".format(str(response_model)))
-        if response_model and not isinstance(response, response_model):
-            response_dict = response.dict()
-            response = response_model(**response_dict)
-
+async def catch_exceptions_middleware(request: Request, call_next):
+    try:
+        response = await call_next(request)
         return response
+    except HTTPException as http_exception:
+        return JSONResponse(status_code=http_exception.status_code, content={"detail": http_exception.detail})
+    except IntegrityError as integrity_error:
+        print("IntegrityError:", integrity_error)
+        return JSONResponse(status_code=400, content={"detail": "IntegrityError occurred"})
+    except SQLAlchemyError as db_exception:
+        print("SQLAlchemy exception:", db_exception)
+        return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+    except Exception as exception:
+        print("Exception:", exception)
+        return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+

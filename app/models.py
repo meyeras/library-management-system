@@ -29,7 +29,6 @@ class Copy(Base):
     id = Column(Integer, primary_key=True)
     book_id = Column(Integer, ForeignKey('books.id'))
     borrowed = Column(Boolean, default=False)
-    # book = relationship('Book', backref='copies')
 
 
 
