@@ -115,6 +115,9 @@ def get_user_borrows(user_id: int, current_user: User, db: Session) -> BorrowsLi
     total_fine_amount = 0
     for borrow in borrows:
         # Calculate max return date based on borrow date and remaining days (in case of overdue, it will be negative)
+        if isinstance(borrow.borrow_date, str):
+            borrow.borrow_date = datetime.strptime(borrow.borrow_date, "%Y-%m-%d %H:%M:%S.%f")
+
         max_return_date = borrow.borrow_date + timedelta(days=MAX_BORROW_TIME) 
         remaining_days = (max_return_date.date() - datetime.now().date()).days
     

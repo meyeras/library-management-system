@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -41,9 +41,11 @@ class Borrow(Base):
 
     copy = relationship('Copy', backref='borrows')
     user = relationship('User', backref='borrows')
-    borrow_date = Column(String)
-    return_date = Column(String)
+    borrow_date = Column(DateTime)
+    return_date = Column(DateTime)
 
+    def __repr__(self):
+        return f"Borrow(id={self.id}, copy_id={self.copy_id}, user_id={self.user_id}, borrow_date={self.borrow_date}, return_date={self.return_date})"
 
 class User(Base):
     __tablename__ = 'users'

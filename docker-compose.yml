@@ -3,9 +3,12 @@ version: '3.4'
 services:
   api:
     image: librarymanagementapi
+    restart: always
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./DockerFile
+    env_file:
+      - ./.env
     ports:
       - 8000:8000
 
@@ -13,7 +16,7 @@ services:
     image: postgres
     container_name: postgres-library
     ports:
-      - '6500:5432'
+      - '5432:5432'
     restart: always
     env_file:
       - ./.env
