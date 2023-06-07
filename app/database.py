@@ -8,9 +8,8 @@ from .config import settings
 # Construct the PostgreSQL database connection URL with the variables stored in the .env file and
 POSTGRES_URL = f"postgresql://{settings.POSTGRES_USER}:{settings.POSTGRES_PASSWORD}@{settings.POSTGRES_HOSTNAME}:{settings.DATABASE_PORT}/{settings.POSTGRES_DB}"
 
-engine = create_engine(
-    POSTGRES_URL, echo=True
-)
+# Create a database engine with connection pooling
+engine = create_engine(POSTGRES_URL, pool_size=10, max_overflow=20)
 
 print("The postgres url is:{0}".format(POSTGRES_URL))
 
